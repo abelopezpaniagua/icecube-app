@@ -1,59 +1,149 @@
-# IcecubeApp
+# 🧠 Smart Task Collaboration Platform – Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+This is the frontend client for the **Smart Task Collaboration Platform** – a modern web-based tool that enables users to create and manage workspaces, boards, and tasks collaboratively, with support for real-time interactions, notifications, and AI task suggestions.
 
-## Development server
+This project follows the **SOFEA architecture**, where the frontend is fully decoupled from the backend API.
 
-To start a local development server, run:
+---
+
+## 🚀 Features (MVP)
+
+- ✅ User authentication (JWT-based)
+- ✅ Workspace and board views
+- ✅ Task creation, editing, and filtering
+- ✅ Real-time UI updates (planned)
+- ✅ In-app notifications
+- ✅ Responsive design
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Angular / React / Vue (Choose accordingly)
+- **State Management**: NgRx / Redux / Pinia
+- **HTTP Client**: Axios / Angular HttpClient
+- **Styling**: TailwindCSS / Bootstrap / SCSS
+- **WebSockets**: Socket.IO / SignalR (planned)
+- **Notifications**: Toastr / SweetAlert2 / Custom
+- **AI Integration**: OpenAI / Hugging Face (optional)
+- **Build Tools**: Vite / Webpack / Angular CLI
+
+---
+
+## 📁 Project Structure (Sample)
+
+```
+/src
+  /app
+    /auth
+    /core
+    /shared
+    /features
+      /workspace
+      /board
+      /task
+  /assets
+  /environments
+angular.json / vite.config.js
+```
+
+---
+
+## 🧪 Getting Started (Development)
+
+### 1. Clone the repo
 
 ```bash
+git clone https://github.com/your-username/smart-task-client.git
+cd smart-task-client
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up environment
+
+Create an `.env` or use `environment.ts`:
+
+```ts
+export const environment = {
+  apiUrl: "http://localhost:5000/api",
+  socketUrl: "http://localhost:5000",
+  openAiKey: "your-openai-key",
+};
+```
+
+### 4. Run the development server
+
+```bash
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🔐 Authentication
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Login and registration
+- JWT stored securely (e.g., HttpOnly cookie or localStorage)
+- Token refresh support
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🌐 Communication
 
-```bash
-ng generate --help
-```
+- RESTful API consumption
+- WebSocket integration (planned)
+- External API usage (AI integrations)
 
-## Building
+---
 
-To build the project run:
+## 🧑‍💻 Development Scripts
 
-```bash
-ng build
-```
+| Action         | Command          |
+| -------------- | ---------------- |
+| Run Dev Server | `npm start`      |
+| Build App      | `npm run build`  |
+| Lint           | `npm run lint`   |
+| Format         | `npm run format` |
+| Test           | `npm run test`   |
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🧩 Future Enhancements
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- 🔁 Real-time task and board updates
+- 🧠 AI task assistant
+- 🧭 Offline-first support
+- 📈 Activity dashboard
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🤝 Contributing
 
-For end-to-end (e2e) testing, run:
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feat/my-feature`)
+3. Commit your changes (`git commit -m 'Add feature'`)
+4. Push to the branch (`git push origin feat/my-feature`)
+5. Open a Pull Request
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📄 License
 
-## Additional Resources
+This project is open-source under the [MIT License](LICENSE).
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🧠 About This Project
+
+This frontend client was created to practice and demonstrate:
+
+- Clean modular UI architecture
+- API-first web development
+- Integration with real-time services and AI APIs
+- SOFEA architectural principles
