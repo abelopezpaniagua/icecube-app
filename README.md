@@ -147,3 +147,43 @@ This frontend client was created to practice and demonstrate:
 - API-first web development
 - Integration with real-time services and AI APIs
 - SOFEA architectural principles
+
+## Project Structure
+
+🗂️ Folder Structure (Standalone-First)
+
+```vbnet
+src/
+└── app/
+    ├── core/            ← global singleton services, guards, interceptors
+    │   ├── services/
+    │   ├── guards/
+    │   ├── interceptors/
+    │   └── config.ts
+    ├── shared/          ← reusable standalone components, directives, pipes
+    │   ├── components/
+    │   ├── directives/
+    │   └── pipes/
+    ├── features/        ← feature areas with routed standalone components
+    │   ├── auth/
+    │   │   ├── pages/
+    │   │   │   ├── login/
+    │   │   │   ├── register/
+    │   │   │   └── pages-routing.ts
+    │   │   ├── auth.service.ts
+    │   │   └── auth.guard.ts
+    │   └── dashboard/
+    │       ├── dashboard.component.ts (standalone)
+    │       └── dashboard-routing.ts
+    ├── app.routes.ts
+    └── main.ts
+```
+
+- This aligns with standalone-focused architecture guidance.
+
+✅ Key Guidelines & Best Practices
+
+- Standalone Components as Default In Angular 19, standalone: true is implied and no longer required to specify manually.
+- Simplifies component creation: ng g component my-comp --standalone.
+
+Migration: Use the SCAM pattern (Single Component Angular Module) to transition gradually
